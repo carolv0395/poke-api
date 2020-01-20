@@ -1,0 +1,86 @@
+// Import Google fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+// Variables for color scheme
+$bg-color: rgba(#6099a0, 0.9);
+$off-white: #fffef2;
+
+// Vixins
+@mixin bg-gradient($angle: 180deg, $amount: 50%) {
+  background: linear-gradient($angle, $bg-color, adjust-hue($bg-color, $amount))
+    fixed;
+}
+
+// Style
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  @include bg-gradient;
+}
+
+.poke-card {
+  height: 250px;
+  width: 170px;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  margin: 30px;
+  padding: 20px;
+}
+
+.no-poke-card {
+  height: 250px;
+  border-radius: 20px;
+  margin: 30px;
+  font-size: 1em;
+  color: rgba($off-white, 0.7);
+  line-height: 500px;
+}
+
+.pokemon-img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.img-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  font-weight: bolder;
+  color: $off-white;
+  letter-spacing: 3px;
+}
+
+.description {
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+.btn-pokemon {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: $off-white;
+  color: $off-white;
+  font-size: 14px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  }
+}
