@@ -14,7 +14,7 @@
     "coffee-script": "^1.12.7",
     "core-js": "^3.4.4",
     "dependency": "0.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.13.0",
     "npm-install-missing": "^0.1.4",
     "popper.js": "^1.16.0",
